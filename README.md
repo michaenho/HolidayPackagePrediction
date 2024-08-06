@@ -10,14 +10,14 @@
 
 ### Table of Contents
 
-1. [Problem Statement](problem-statement)
-2. [Data Collection](data-collection)
-3. [Data Cleaning](data-cleaning)
-4. [Exploratory Data Analysis](exploratory-data-analysis)
-5. [Feature Engineering](feature-engineering)
-6. [Model Training and Evaluation](model-training-and-evaluation)
-7. [Hyperparameter Tuning](hyperparameter-tuning)
-8. [Conclusion](conclusion)
+### 1. [Problem Statement](#1-problem-statement)
+### 2. [Data Collection](data-collection)
+### 3. [Data Cleaning](data-cleaning)
+### 4. [Exploratory Data Analysis](exploratory-data-analysis)
+### 5. [Feature Engineering](feature-engineering)
+### 6. [Model Training and Evaluation](model-training-and-evaluation)
+### 7. [Hyperparameter Tuning](hyperparameter-tuning)
+### 8. [Conclusion](conclusion)
 
 
 ## 1. Problem Statement
