@@ -53,6 +53,30 @@ plt.title('Number Of Trips Distribution')
 ```
 ![Plot](/Plots/NormalDistribution.png)
 
+We could tell from the plots above that those features have a normal distribution, hence it is appropriate to use their mean values to replace the missing values. For the categorical features with missing values, we use mode to replace them.
+
+```
+cols_with_na = ['Age', 'DurationOfPitch', 'NumberOfFollowups', 'PreferredPropertyStar', 'NumberOfTrips', 'NumberOfChildrenVisiting', 'MonthlyIncome', 'TypeOfContact']
+for col in cols_with_na:
+    if col in ['Age', 'DurationOfPitch', 'MonthlyIncome', 'NumberOfTrips']:
+        df[col] = df[col].fillna(df[col].mean())
+    else:
+        df[col] = df[col].fillna(df[col].mode()[0])
+```
+
+### 2. Ensuring data consistency
+
+Firstly, we change those column types from float to integer of those columns that only contain integer values to save memory space. Also, we replace values and column names to ensure data consistency.
+
+```
+df.rename(columns = {'TypeofContact': 'TypeOfContact'}, inplace = True)
+df.Gender = df.Gender.str.replace("Fe Male", "Female")
+
+float_cols = df.select_dtypes(include = ['float64']).columns
+for col in float_cols:
+    df[col] = df[col].astype(int)
+```
+
 ## 4. Exploratory Data Analysis
 
 ## 5. Feature Engineering
@@ -63,4 +87,3 @@ plt.title('Number Of Trips Distribution')
 
 ## 8. Conclusion
 
-dfsdfsf
