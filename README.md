@@ -79,6 +79,34 @@ for col in float_cols:
 
 ## 4. Exploratory Data Analysis
 
+For our data analysis, we need to find out the most significant variables in impacting whether a customer will purchase a package, so that we could optimise the sales focus. I have created a function below that extracts the top n% of features that are positively correlated with the ProdTaken variable.
+
+```
+def get_top_positive_correlated_features(df,percentage):
+
+    df_corr_analysis = pd.get_dummies(df, columns = ['TypeOfContact', 'Occupation', 'Gender', 'ProductPitched', 'MaritalStatus', 'Designation'])
+    corr_sorted = df_corr_analysis.corr()['ProdTaken'].sort_values(ascending = True)
+  
+    num_of_cols_to_drop = int(percentage * len(corr_sorted))
+    cols_to_drop = corr_sorted.iloc[:num_of_cols_to_drop].index
+    df_corr_analysis.drop(columns = cols_to_drop, inplace = True)
+    final_corr = df_corr_analysis.corr()['ProdTaken'].drop('ProdTaken').sort_values(ascending = False)
+
+    
+    sns.barplot(x = final_corr.index, y = final_corr.values)
+    plt.xticks(rotation = 30, size = 6)
+    plt.xlabel('Features')
+    plt.ylabel('Correlation')
+    plt.title(f'Top {(1-percentage)*100:.1f}% features positively correlated with ProdTaken')
+    plt.show()
+    return final_corr
+get_top_positive_correlated_features(df, 0.8)
+```
+The top 20% of features that are positively correlated with ProdTaken are shown below. As we can see, those who are single, own a passport or are executives are more likely to take up the package.
+
+![Plot](/Plots/CorrelatedFeatures.png)
+
+
 ## 5. Feature Engineering
 
 ## 6. Model Training and Evaluation
