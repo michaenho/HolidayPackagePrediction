@@ -13,7 +13,7 @@
 ### 1. [Problem Statement](#1-problem-statement)
 ### 2. [Data Collection](#2-data-collection)
 ### 3. [Data Cleaning](#3-data-cleaning)
-### 4. [Exploratory Data Analysis](#4-exploratory-data-analysis)
+### 4. [Exploratory Data Analysis](#exploratory-data-analysis)
 ### 5. [Feature Engineering](#5-feature-engineering)
 ### 6. [Model Training and Evaluation](#6-model-training-and-evaluation)
 ### 7. [Hyperparameter Tuning](#7-hyperparameter-tuning)
