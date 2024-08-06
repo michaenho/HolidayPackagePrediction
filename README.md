@@ -32,7 +32,7 @@ The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/susant4lear
 
 ## 3. Data Cleaning
 
-#### 1. Imputation of missing values
+### 1. Imputation of missing values
 
 By plotting the distribution of features that contain missing values, we could determine how to impute the missing values.
 
@@ -51,7 +51,7 @@ plt.subplot(2,2,4)
 sns.kdeplot(df.NumberOfTrips, shade = True)
 plt.title('Number Of Trips Distribution')
 ```
-
+![Plot](/Plots/NormalDistribution.png)
 
 ## 4. Exploratory Data Analysis
 
