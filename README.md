@@ -107,6 +107,22 @@ The top 20% of features that are positively correlated with ProdTaken are shown 
 ![Plot](/Plots/CorrelatedFeatures.png)
 
 
+Knowing those are the features that are highly correlated with taking up the package, we would like to find out what are the % of customers belonging to those categories actually took up the package.
+
+```
+top_features = pd.DataFrame(
+    {'Feature': ['Passport', 'ProductBasic', 'Executive', 'SingleStatus'],
+    'Percentage of Product Taken': [round((df[(df.ProdTaken == 1) & (df.Passport == 1)]['ProdTaken'].count() / df[df.Passport == 1]['ProdTaken'].count())*100, 2),
+    round((df[(df.ProdTaken == 1) & (df.ProductPitched == 'Basic')]['ProdTaken'].count() / df[df.ProductPitched == 'Basic']['ProdTaken'].count())*100, 2),
+    round((df[(df.ProdTaken == 1) & (df.Designation == 'Executive')]['ProdTaken'].count() / df[df.Designation == 'Executive']['ProdTaken'].count())*100, 2),
+    round((df[(df.ProdTaken == 1) & (df.MaritalStatus == 'Single')]['ProdTaken'].count() / df[df.MaritalStatus == 'Single']['ProdTaken'].count())*100, 2)]})
+
+top_features
+```
+
+Based on the results obtained, we could see that about 35% of customers who own a passport or are single, and 30% of customers who are executives, have purchased the package. Those are significant proportion and hence, it is wise to target these groups of customers to increase the likelihood of package purchase and reduce marketing costs.
+
+
 ## 5. Feature Engineering
 
 ## 6. Model Training and Evaluation
