@@ -22,13 +22,19 @@
 
 
 
+
+
 ## 1. Problem Statement
 
 "Trips & Travel.Com" observed that 18% of customers purchased packages last year. However, high marketing costs were incurred due to random customer contacts. The goal is to predict which customers are likely to purchase the new Wellness Tourism Package using available data, thereby optimizing marketing expenditures.
 
+
+
 ## 2. Data Collection
 
 The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/susant4learning/holiday-package-purchase-prediction). It contains 20 columns and 4888 rows, providing information on customer demographics, past interactions, and package preferences.
+
+
 
 ## 3. Data Cleaning
 
