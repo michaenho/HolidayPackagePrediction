@@ -22,12 +22,12 @@
 
 ## 1. Problem Statement
 
-"Trips & Travel.Com" observed that 18% of customers purchased packages last year. However, high marketing costs were incurred due to random customer contacts. The goal is to predict which customers are likely to purchase the new Wellness Tourism Package using available data, thereby optimizing marketing expenditures.
+"Trips & Travel.Com" observed that 18% of customers purchased packages last year. However, high marketing costs were incurred due to random customer contacts. The goal is to provide recommendations to the marketing team and also build a model to predict the potential customer who is going to purchase the newly introduced Wellness Tourism Package.
 
 
 ## 2. Data Collection
 
-The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/susant4learning/holiday-package-purchase-prediction). It contains 20 columns and 4888 rows, providing information on customer demographics, past interactions, and package preferences.
+The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/susant4learning/holiday-package-purchase-prediction). It contains 20 columns and 4888 rows, providing information on customer demographics, past interactions, and package preferences. Some of the key features include designation, passport, city tier, martial status, occupation and product taken.
 
 
 ## 3. Data Cleaning
@@ -285,3 +285,6 @@ Random Forest still perform the best with both recall and accuracy score to be 0
 
 ## 8. Conclusion
 
+- In order to reduce marketing costs and sell the new package effectively, we should target customers who fulfill at least one of the following criterias: Own a passport, single, executives, have purchased the basic package previously.
+
+- Random Forest model is the best model to predict the potential customer who is going to purchase the newly introduced travel package going forward.
