@@ -136,7 +136,7 @@ df.ProdTaken.value_counts().plot(kind = 'bar', xlabel='Product Taken', ylabel='C
 plt.xticks(rotation = 0, ticks = [0,1], labels = ['No', 'Yes'])
 ```
 
-[!Plot](/Plots/Imbalance.png)
+![Plot](/Plots/Imbalance.png)
 
 ## 6. Model Training and Evaluation
 
