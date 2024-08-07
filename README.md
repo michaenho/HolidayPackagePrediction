@@ -125,6 +125,19 @@ Based on the results obtained, we could see that about 35% of customers who own 
 
 ## 5. Feature Engineering
 
+Before we perform machine learning, we need to ensure the features are suitable for training by the models.
+
+### 1. Resampling
+
+As we can observe from the plot, there is imbalance in the dependent variable 'ProdTaken' where the number of no is greater than the number of yes. This could cause the machine learning models to be bias towards the negative class.
+
+```
+df.ProdTaken.value_counts().plot(kind = 'bar', xlabel='Product Taken', ylabel='Count')
+plt.xticks(rotation = 0, ticks = [0,1], labels = ['No', 'Yes'])
+```
+
+[!Plot](/Plots/Imbalance.png)
+
 ## 6. Model Training and Evaluation
 
 ## 7. Hyperparameter Tuning
