@@ -1,4 +1,4 @@
-# Holiday Package Prediction (Hello)
+# Holiday Package Prediction
 
 ###### Author: Michaen Ho
 
