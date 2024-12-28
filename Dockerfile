@@ -1,6 +1,8 @@
-FROM python:3.11
+FROM python:3.11-slim
 
 WORKDIR /app
+
+RUN pip install --upgrade pip setuptools wheel
 
 COPY requirements.txt .
 
@@ -10,5 +12,5 @@ COPY . .
 
 EXPOSE 8501
 
-CMD ["streamlit", "run", "predict_page.py"]
+CMD ["streamlit", "run", "src/main.py"]
 

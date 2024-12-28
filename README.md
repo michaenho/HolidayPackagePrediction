@@ -33,6 +33,28 @@
    ```
 
 
+## Instructions for Building and Running the Docker Container(s)
+
+1. **Build the Docker Image**:  
+   Ensure Docker is installed and running on your machine. Then, in the project root directory, build the Docker image:
+   ```bash
+   docker build -t streamlit-app .
+
+   ```
+
+2. **Run the Docker Container**:  
+   Use the following command to run the container.
+   ```bash
+   docker run -d -p 8501:8501 --name streamlit-container streamlit-app
+
+   ```
+
+3. **Access the Application**:  
+   Once the container is running, you can access the prediction webpage by opening a web browser and go to 'http://localhost:8501'.
+
+
+
+
 ## Table of Contents
 
 ### 1. [Problem Statement](#1-problem-statement)
