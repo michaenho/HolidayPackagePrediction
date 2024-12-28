@@ -20,8 +20,8 @@ designation_le = data['designation']
 
 
 
-def show_classifer_page():
-    st.set_page_config(page_title='Holiday Package Prediction', layout='centered')
+def show_classifier_page():
+    st.set_page_config(page_title='Holiday Package Uptake Prediction', layout='centered')
     
     st.markdown(
         """
@@ -35,21 +35,16 @@ def show_classifer_page():
         unsafe_allow_html=True
     )
     
-    # Title and Description
-    st.title('Holiday Package Prediction')
-    st.markdown(
-        """
-        ### Welcome to our Holiday Package Prediction Tool!
-        Please provide the following details to predict the best holiday package for you.
-        """
-    )
-    
+    # Header
+    st.title('Holiday Package Uptake Prediction')
+    st.markdown("Provide customer details to predict if they will purchase a holiday package.")
+
     # Form Layout
     with st.form(key='prediction_form'):
         col1, col2 = st.columns(2)
         
         with col1:
-            product_choice = st.selectbox('Select Product Type', ('Basic', 'Standard', 'Deluxe', 'Super Deluxe', 'Premium'))
+            product_choice = st.selectbox('Product Type', ('Basic', 'Standard', 'Deluxe', 'Super Deluxe', 'Premium'))
             marital_status_choice = st.selectbox('Marital Status', ('Single', 'Married', 'Divorced', 'Unmarried'))
             age = st.slider('Age', 18, 60)
             
@@ -58,8 +53,7 @@ def show_classifer_page():
             passport_choice = st.selectbox('Passport Status', (0, 1), format_func=lambda x: 'Yes' if x == 1 else 'No')
             income = st.slider('Income (SGD)', 0, 1000000)
         
-        num_followups = st.slider('Number of Follow-ups', 0, 10)
-        
+        num_followups = st.slider('Follow-up Calls', 0, 10)
         submit_button = st.form_submit_button(label='Predict')
     
     # Prediction Logic
@@ -71,12 +65,13 @@ def show_classifer_page():
         X = X.astype(float)
 
         prediction = classifier.predict(X)
-        result = 'buy' if prediction == 1 else 'not buy'
+        result = 'purchase' if prediction == 1 else 'not purchase'
 
-        st.write(f'Based on the details you provided, the customer will {result} the holiday package.')
+        st.success(f'Prediction: Customer will {result} the holiday package.')
+
+show_classifier_page()
 
 
-show_classifer_page()
 
 
 
