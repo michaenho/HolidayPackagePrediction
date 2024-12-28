@@ -58,13 +58,6 @@
 
 This Streamlit-based web application predicts whether a customer will purchase a holiday package based on various input features. Users provide details such as product type, marital status, age, designation, passport status, income, and the number of follow-ups. The tool then uses a trained machine learning model to predict if the customer will buy the package, displaying the result on the webpage.
 
-Key features:
-
-User Inputs: Product type, marital status, age, designation, passport status, income, and follow-ups.
-Prediction: Based on the input data, the model predicts if the customer will purchase the holiday package.
-Streamlit Interface: A user-friendly interface for seamless interaction and real-time predictions.
-
-
 ![Plot](/Plots/Webpage.png)
 
 
