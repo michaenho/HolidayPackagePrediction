@@ -4,11 +4,36 @@
 
 #
 
-### Project Overview
+## Project Overview
 
 "Trips & Travel.Com" company aims to expand its customer base by introducing a new Wellness Tourism Package. Wellness Tourism is defined as travel that allows the traveler to maintain, enhance, or kick-start a healthy lifestyle, and support or increase one's sense of well-being. The company plans to utilize existing customer data to efficiently target potential customers, reducing marketing costs and increasing the likelihood of package purchases.
 
-### Table of Contents
+## Instructions for Setting Up the Environment and Running the Code
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/michaenho/HolidayPackagePrediction.git
+   cd HolidayPackagePrediction
+   
+   ```
+
+2. **Install Python Dependencies**:  
+   This project uses Python 3.11+. It's recommended to set up a virtual environment:
+   ```bash
+   python3 -m venv env
+   source env/bin/activate  # On Windows use `env\Scripts\activate`
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Project**:  
+   Once dependencies are installed, you can execute the script and open up the prediction website using:
+   ```bash
+   cd src
+   streamlit run main.py
+   ```
+
+
+## Table of Contents
 
 ### 1. [Problem Statement](#1-problem-statement)
 ### 2. [Data Collection](#2-data-collection)
